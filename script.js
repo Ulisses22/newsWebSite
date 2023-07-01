@@ -1,7 +1,7 @@
 function headline(country,pageSize){
     var url = `https://newsapi.org/v2/top-headlines?`
             + `country=${country}&`
-            + `apiKey=${API_KEY}`
+            + `apiKey=${API_KEY}&`
             + `pageSize=${pageSize}`
 
         var req = new Request(url);
@@ -24,16 +24,15 @@ function headline(country,pageSize){
                     card.className = 'col-sm-6 col-md-4 col-lg-3 mb-1';
 
                     var cardContent = `
-                            <div class="card">
-                                <!-- style="max-height: 400px; overflow: hidden;display: flex;" -->
+                            <div class="card" style="height:250px;">
                                  <a href="${article.url}" class="text-decoration-none"> 
-                                <div class="" style="height: 120px;">
-                                    <img src="${article.urlToImage}" class="card-img-top" style="max-height: 100%; width: 100%;background-position: 500px 150px; object-fit: cover" alt="News Image">
-                                </div>
+
+                                <img class="card-img-top align-self-center" src="${article.urlToImage  == null ? 'src/failed_load_image.png' : article.urlToImage}" alt="Card image cap" style="height: 100px">
+                             
                                 <div class="card-body">
-                                    <h6 class="card-title text-dark">${article.title}</h6>
-                                    <p class="card-text text-secondary" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
-                                        ${article.description}
+                                    <h6 class="card-title text-dark" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h6>
+                                    <p class="card-text text-secondary mb-1" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                        ${article.description == null ? '' : article.description}
                                     </p>
                                     </a>
                                 </div>
@@ -55,7 +54,7 @@ function news(country,category,pageSize){
     var url = 'https://newsapi.org/v2/top-headlines?'
             + `country=${country}&`
             + `category=${category}&`
-            + `apiKey=${API_KEY}`
+            + `apiKey=${API_KEY}&`
             + `pageSize=${pageSize}`
 
         var req = new Request(url);
@@ -77,12 +76,14 @@ function news(country,category,pageSize){
                     var card = document.createElement('div');
                     card.className = 'col-sm-6 col-md-4 col-lg-3 mb-0';
 
+                    console.log(article.urlToImage);
+
                     var cardContent = `
-                    <div class="card mb-2">
-                        <img class="card-img-top" src="${article.urlToImage}" alt="Card image cap">
+                    <div class="card mb-2" style="height:320px;">
+                        <img class="card-img-top align-self-center" src="${article.urlToImage  == null ? 'src/failed_load_image.png' : article.urlToImage}" alt="Card image cap" style="${article.urlToImage == null ? 'width: 25%' : 'width: 100%'}">
                         <div class="card-body">
-                        <h5 class="card-title">${article.title}</h5>
-                        </div>
+                        <h5 class="card-title" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h5>
+                    </div>
                         <div class="card-footer">
                         <small class="text-muted"><a href="${article.url}" class="btn btn-primary">Read More</a></small>
                         </div>
@@ -161,7 +162,7 @@ function search_news(country,category,pageSize,q){
     var url = 'https://newsapi.org/v2/top-headlines?'
             + `country=${country}&`
             + `category=${category}&`
-            + `apiKey=${API_KEY}`
+            + `apiKey=${API_KEY}&`
             + `pageSize=${pageSize}&`
             + `q=${q}`
 
@@ -186,9 +187,9 @@ function search_news(country,category,pageSize,q){
 
                     var cardContent = `
                     <div class="card mb-2">
-                        <img class="card-img-top" src="${article.urlToImage}" alt="Card image cap">
+                        <img class="card-img-top" src="${article.urlToImage  == null ? 'yout.jpg' : article.urlToImage}" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">${article.title}</h5>
+                        <h5 class="card-title" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h5>
                         </div>
                         <div class="card-footer">
                         <small class="text-muted"><a href="${article.url}" class="btn btn-primary">Read More</a></small>
