@@ -80,7 +80,7 @@ function news(country,category,pageSize){
 
                     var cardContent = `
                     <div class="card mb-2" style="height:320px;">
-                        <img class="card-img-top align-self-center" src="${article.urlToImage  == null ? 'src/failed_load_image.png' : article.urlToImage}" alt="Card image cap" style="${article.urlToImage == null ? 'width: 25%' : 'width: 100%'}">
+                        <img class="card-img-top align-self-center" src="${article.urlToImage  == null ? 'src/failed_load_image.png' : article.urlToImage}" alt="Card image cap" style="${article.urlToImage == null ? 'width: 25%' : 'width: 100%'};max-height:150px">
                         <div class="card-body">
                         <h5 class="card-title" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h5>
                     </div>
@@ -147,7 +147,7 @@ function time(){
     // Function to format the date and time
     function formatDateTime(date) {
         const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-        return date.toLocaleDateString(undefined, options);
+        return date.toLocaleDateString("en-US", options);
     }
 
     // Update the content of the h2 element with the current date and time
@@ -158,10 +158,9 @@ function time(){
     }, 1000); // Update every second
 }
 
-function search_news(country,category,pageSize,q){
-    var url = 'https://newsapi.org/v2/top-headlines?'
-            + `country=${country}&`
-            + `category=${category}&`
+// functions for getting news on the page search.html
+function search_news(pageSize,q){
+    var url = 'https://newsapi.org/v2/everything?'
             + `apiKey=${API_KEY}&`
             + `pageSize=${pageSize}&`
             + `q=${q}`
@@ -186,10 +185,10 @@ function search_news(country,category,pageSize,q){
                     card.className = 'col-sm-6 col-md-4 col-lg-3 mb-0';
 
                     var cardContent = `
-                    <div class="card mb-2">
+                    <div class="card mb-2"  style="height:320px;">
                         <img class="card-img-top" src="${article.urlToImage  == null ? 'yout.jpg' : article.urlToImage}" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h5>
+                        <h5 class="card-title" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">${article.title}</h5>
                         </div>
                         <div class="card-footer">
                         <small class="text-muted"><a href="${article.url}" class="btn btn-primary">Read More</a></small>
@@ -206,6 +205,7 @@ function search_news(country,category,pageSize,q){
             });
 }
 
+// listen the form submit
 function sendForm(event){
     event.preventDefault();
 
@@ -214,11 +214,15 @@ function sendForm(event){
     if(input_search.value === ""){
         return false;
     }
-    search_news(country='us',category='technology',pageSize=20,q=`${input_search.value}`)
+    search_news(pageSize=20,q=`${input_search.value}`)
     // event.target.submit();
 }
 const form = document.getElementById('form_search');
-form.addEventListener("submit", sendForm)
+// verify if the element exists
+if (form != null) {
+    form.addEventListener("submit", sendForm)
+}
 
+// call primary functions
 weather();
 time();
