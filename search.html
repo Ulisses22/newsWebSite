@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">News Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="science.html">Science</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="business.html">Business</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="technology.html">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sports.html">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html#content_form">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-light text-center py-5 mb-0">
+        <div class="container">
+            <h1 class="display-4">Breaking News</h1>
+            <p class="lead">Stay updated with the latest news from around the world</p>
+            <div class="p-0 m-0 text-center">
+                <h6 class="" id="dateAndTime"></h6>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Page Form -->
+    <section class="search-page py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h2 class="text-center mb-4">Search Page</h2>
+                    <form class="search-form" id="form_search">
+                        <div class="input-group">
+                            <input type="text" id="input_search" class="form-control" placeholder="Enter your search query"
+                                aria-label="Search Query" aria-describedby="search-button">
+                            <button class="btn btn-primary" type="submit" id="search-button"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news py-5 mb-1">
+        <div class="container">
+            <!-- load news content -->
+            <div class="row list-news"></div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="bg-light sweather py-4 pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="mb-4 text-warning">
+                        <span data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip content goes here">
+                            WEATHER
+                            <i class="fa-solid fa-location-dot text-center mx-1" data-fa-transform="shrink-4">
+                                <h6 class="text-secondary font-weight-bold mt-1">
+                                    Porto
+                                </h6>
+                            </i>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row weather-data">
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container">
+            <div class="row">
+                <p class="mb-0 display-6">Find us here
+                </p>
+                <hr>
+            </div>
+            <div class="row mb-5">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a href="#" class="text-light">
+                            <i class="fab fa-2xl fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-light">
+                            <i class="fab fa-2xl fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-light">
+                            <i class="fab fa-2xl fa-instagram"></i>
+                        </a>
+                    </li>
+                    <!-- Add more social media icons as needed -->
+                </ul>
+            </div>
+            <div class="row mb-0">
+                <p>Copyright &copy; 2023 <strong>News Website</strong> | Privacy</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
