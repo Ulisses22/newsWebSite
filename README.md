@@ -37,3 +37,5 @@ It's a news site with only JavaScript to consume API and bootstrap
 ![Preview](https://github.com/Ulisses22/newsWebSite/blob/master/src/newsWebSitePreview.gif)
 
 #### License
+ISC License
+Copyright <2023> <Ulisses>
