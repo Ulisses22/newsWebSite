@@ -15,8 +15,6 @@ It's a news site with just JavaScript and bootstrap
 
 ### How to install and run the project
 
-- API'S
-
 #### 1. scripts.js
 - [News API](https://newsapi.org/): generate your api on the official site and replace.
 ```markdown
