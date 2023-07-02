@@ -1,9 +1,9 @@
-# News Web Site
+# News Web Site - [preview](#preview)
 It's a news site with just JavaScript and bootstrap
 
 - News aggregator from around the world, with categories, search engine and for without backend. This application aims to show how simple it can consume APIs found freely(not totally 😅) on the internet if applied to fun projects. In our case, we consume an API to fetch news and, an API to fetch weather and another to send e-mails.
 - Minimally optimized for mobile.
-- It's a learning application, **don't use it in production**.
+- It's a learning application, **don't use it in production**!.
 
 ### Features
 - Categories
