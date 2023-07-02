@@ -16,12 +16,15 @@ It's a news site with just JavaScript and bootstrap
 ### How to install and run the project
 
 - API'S
-```markdown
+
 # scripts.js
 - News: generate your api on the official site and replace https://newsapi.org/.
+```markdown
   apiKey=${API_KEY}&
+```
 # contact.html
 - Contact form: generate your api on the official site and replace https://formsubmit.co/.
+```markdown
   formsubmit.co/YOUR_API_KEY
 ```
 
