@@ -17,12 +17,12 @@ It's a news site with just JavaScript and bootstrap
 
 - API'S
 
-# scripts.js
+#### scripts.js
 - News: generate your api on the official site and replace https://newsapi.org/.
 ```markdown
   apiKey=${API_KEY}&
 ```
-# contact.html
+#### contact.html
 - Contact form: generate your api on the official site and replace https://formsubmit.co/.
 ```markdown
   formsubmit.co/YOUR_API_KEY
