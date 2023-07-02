@@ -25,6 +25,9 @@ It's a news site with just JavaScript and bootstrap
 ```markdown
   formsubmit.co/YOUR_API_KEY
 ```
+#### 3. index.html
+- Open **index.html** file in your browser
+
 
 ### Improvement ideas
 - Pagination
