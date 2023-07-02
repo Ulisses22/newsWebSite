@@ -32,8 +32,7 @@ It's a news site with just JavaScript and bootstrap
 - Pagination
 - Server-side
 
-
 ### Preview
-
+![Prwciew]https://github.com/Ulisses22/newsWebSite/blob/master/src/newsWebSitePreview.gif
 
 #### License
