@@ -20,7 +20,7 @@ It's a news site with just JavaScript and bootstrap
 #### scripts.js
 - [News API](https://newsapi.org/): generate your api on the official site and replace.
 ```markdown
-  apiKey=${API_KEY}&
+  apiKey=${API_KEY}
 ```
 #### contact.html
 - [Form Submit](https://formsubmit.co/): generate your api on the official site and replace.
