@@ -38,4 +38,4 @@ It's a news site with only JavaScript to consume API and bootstrap
 
 #### License
 ISC License
-Copyright <2023> <Ulisses>
+Copyright <2023>
