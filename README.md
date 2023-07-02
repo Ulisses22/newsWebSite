@@ -7,20 +7,21 @@ It's a news site with just JavaScript and bootstrap
 
 ### Features
 - Categories
-1. science, business, technology, sports
+  science, business, technology, sports
 - Contact
-1. On the contact page it is possible to send real emails
--
+  On the contact page it is possible to send real emails
+- Search page
+  it is allowed to search for news in the input of the page
 
 ### How to install and run the project
 
 - API'S
 ```markdown
 # scripts.js
-- News: generate your api on the official site and replace [News Api](https://newsapi.org/)
+- News: generate your api on the official site and replace [News Api](https://newsapi.org)
   apiKey=${API_KEY}&
 # contact.html
-- Contact form: generate your api on the official site and replace [Form Submit](https://formsubmit.co/)
+- Contact form: generate your api on the official site and replace [Form Submit](https://formsubmit.co)
   formsubmit.co/YOUR_API_KEY
 ```
 
